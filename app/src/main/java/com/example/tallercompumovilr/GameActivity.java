@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class GameActivity extends AppCompatActivity {
     private EditText numeroIngresado;
     private TextView textoInit,textWin,textoCantiIntentos;
     private Button adivinarButton;
+    private ImageView imagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,7 @@ public class GameActivity extends AppCompatActivity {
         textoInit = gameBinding.textoInicial;
         textWin = gameBinding.textWin;
         textoCantiIntentos =gameBinding.textoIntentos;
+        imagen = gameBinding.awesomeFace;
     }
     public void adivinar (View view){
         if(numeroIngresado.getText().toString().isEmpty() ){
@@ -49,6 +52,7 @@ public class GameActivity extends AppCompatActivity {
                 String aux = "Lo hiciste en "+cantiIntentos+" intentos.";
                 textoCantiIntentos.setText(aux);
                 textoCantiIntentos.setVisibility(View.VISIBLE);
+                imagen.setVisibility(View.VISIBLE);
 
             }else{
                 cantiIntentos++;
