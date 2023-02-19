@@ -25,13 +25,8 @@ public class MainActivity extends AppCompatActivity {
         mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(mainBinding.getRoot());
 
-        mainBinding.countClickGame.setText(String.format("El bóton se ha oprimido %d veces.",cantiPlay));
-        mainBinding.countClickCountry.setText(String.format("El bóton se ha oprimido %d veces.",cantiPais));
-
-        mainBinding.dateClickGame.setText(String.format("Usado por última vez el %s",auxFechaPlay));
-        mainBinding.dateClickCountry.setText(String.format("Usado por última vez el %s",auxFechaPais));
     }
 
     @Override
@@ -45,17 +40,19 @@ public class MainActivity extends AppCompatActivity {
     }
     public void jugar(View view){
         Intent intentGame = new Intent(this,GameActivity.class);
-        startActivity(intentGame);
         cantiPlay++;
         datePlay = new Date();
         auxFechaPlay = sdf.format(datePlay);
+        startActivity(intentGame);
+
     }
     public void paises(View view){
         Intent intentCountries = new Intent(this,CountriesAcitvity.class);
-        startActivity(intentCountries);
         cantiPais++;
         datePais = new Date();
         auxFechaPais = sdf.format(datePais);
+        startActivity(intentCountries);
+
     }
 
 
