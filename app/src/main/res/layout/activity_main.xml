@@ -30,33 +30,37 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/playButtonXML"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/playButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#FF8F00"
                 android:drawableLeft="@drawable/controller"
                 android:fallbackLineSpacing="true"
                 android:gravity="right|center_vertical"
                 android:hapticFeedbackEnabled="true"
+                android:onClick="jugar"
+                android:paddingLeft="30dp"
                 android:paddingRight="60dp"
                 android:text="JUGAR"
-                android:textSize="30dp"
-                android:onClick="jugar"/>
+                android:textSize="30dp" />
 
             <TextView
                 android:id="@+id/dateClickGame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:text="@string/gameTextDateClick" />
             <TextView
                 android:id="@+id/countClickGame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:text="@string/countClickGame" />
 
         </LinearLayout>
@@ -70,32 +74,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/countryButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#558B2F"
                 android:drawableLeft="@drawable/world"
                 android:gravity="right|center_vertical"
+                android:onClick="paises"
                 android:paddingRight="60dp"
+                android:paddingLeft="30dp"
                 android:text="PAISES"
-                android:textSize="30dp"
-                android:onClick="paises"/>
+                android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/fechaOprimido"
+                android:id="@+id/dateClickCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:text="@string/textCountriesDateClick" />
 
             <TextView
-                android:id="@+id/cantiOprimido"
+                android:id="@+id/countClickCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:text="@string/countClickCountries" />
 
         </LinearLayout>

@@ -19,39 +19,31 @@ public class GameActivity extends AppCompatActivity {
     private int numero = new Random().nextInt(50);
     private int cantiIntentos = 0;
     private GameBinding gameBinding;
-    private EditText numeroIngresado;
-    private TextView textoInit,textWin,textoCantiIntentos;
-    private Button adivinarButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         gameBinding = GameBinding.inflate(getLayoutInflater());
         setContentView(gameBinding.getRoot());
-
-        adivinarButton = gameBinding.guessButton;
-        numeroIngresado = gameBinding.guessText;
-        textoInit = gameBinding.textoInicial;
-        textWin = gameBinding.textWin;
-        textoCantiIntentos =gameBinding.textoIntentos;
     }
     public void adivinar (View view){
-        if(numeroIngresado.getText().toString().isEmpty() ){
+        if(gameBinding.guessText.getText().toString().isEmpty() ){
             Toast.makeText(getApplicationContext(),"No dejes el espacio vacio",Toast.LENGTH_SHORT).show();
         }else {
-            int numeroIng = Integer.parseInt(numeroIngresado.getText().toString());
+            int numeroIng = Integer.parseInt(gameBinding.guessText.getText().toString());
             if(numeroIng==numero){
-                numeroIngresado.setVisibility(View.GONE);
-                adivinarButton.setVisibility(View.GONE);
-                textoInit.setVisibility(View.GONE);
+                gameBinding.guessText.setVisibility(View.GONE);
+                gameBinding.guessButton.setVisibility(View.GONE);
+                gameBinding.textoInicial.setVisibility(View.GONE);
 
-                textWin.append(Integer.toString(numero));
-                textWin.setVisibility(View.VISIBLE);
+                gameBinding.textWin.append(Integer.toString(numero));
+                gameBinding.textWin.setVisibility(View.VISIBLE);
                 String aux = "Lo hiciste en "+cantiIntentos+" intentos.";
-                textoCantiIntentos.setText(aux);
-                textoCantiIntentos.setVisibility(View.VISIBLE);
+                gameBinding.textoIntentos.setText(aux);
+                gameBinding.textoIntentos.setVisibility(View.VISIBLE);
 
             }else{
                 cantiIntentos++;
+                gameBinding.guessText.setText("");
                 if(numeroIng > 50){
                     Toast.makeText(getApplicationContext(),"El numero debe ser menor a 50",Toast.LENGTH_SHORT).show();
                 }
