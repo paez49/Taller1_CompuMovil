@@ -30,22 +30,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/playButtonXML"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/teal_200"
-                android:backgroundTint="#F9A825"
                 android:drawableLeft="@drawable/controller"
                 android:fallbackLineSpacing="true"
                 android:gravity="right|center_vertical"
                 android:hapticFeedbackEnabled="true"
-                android:onClick="jugar"
-                android:paddingLeft="20dp"
                 android:paddingRight="60dp"
                 android:text="JUGAR"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:onClick="jugar"/>
 
             <TextView
                 android:id="@+id/dateClickGame"
@@ -54,7 +51,6 @@
                 android:layout_weight="1"
                 android:inputType="none"
                 android:text="@string/gameTextDateClick" />
-
             <TextView
                 android:id="@+id/countClickGame"
                 android:layout_width="match_parent"
@@ -74,19 +70,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/countryButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#8BC34A"
                 android:drawableLeft="@drawable/world"
                 android:gravity="right|center_vertical"
-                android:onClick="paises"
                 android:paddingRight="60dp"
                 android:text="PAISES"
                 android:textSize="30dp"
-                app:iconTint="#FF0000" />
+                android:onClick="paises"/>
 
             <TextView
                 android:id="@+id/fechaOprimido"
