@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mainBinding;
     private Integer cantiPlay = 0;
     private Integer cantiPais = 0;
-    private SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd MMMM yyyy");
+    private SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm:ss");
     private Date datePlay;
     private  Date datePais;
     private String auxFechaPais = "----";
@@ -32,11 +32,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected  void onResume(){
         super.onResume();
-        mainBinding.countClickGame.setText(String.format("El bóton se ha oprimido %d veces.",cantiPlay));
-        mainBinding.countClickCountry.setText(String.format("El bóton se ha oprimido %d veces.",cantiPais));
+        if(cantiPlay != 0){
+            mainBinding.countClickGame.setText(String.format("El bóton se ha oprimido %d veces.",cantiPlay));
+            mainBinding.dateClickGame.setText(String.format("Usado por última vez el %s",auxFechaPlay));
+        }else{
+            mainBinding.countClickGame.setText("");
+            mainBinding.dateClickGame.setText("El boton no ha sido utilizado");
+        }
+        if(cantiPais != 0){
+            mainBinding.countClickCountry.setText(String.format("El bóton se ha oprimido %d veces.",cantiPais));
+            mainBinding.dateClickCountry.setText(String.format("Usado por última vez el %s",auxFechaPais));
+        }else{
+            mainBinding.countClickCountry.setText("");
+            mainBinding.dateClickCountry.setText("El boton no ha sido utilizado");
+        }
 
-        mainBinding.dateClickGame.setText(String.format("Usado por última vez el %s",auxFechaPlay));
-        mainBinding.dateClickCountry.setText(String.format("Usado por última vez el %s",auxFechaPais));
+
+
+
     }
     public void jugar(View view){
         Intent intentGame = new Intent(this,GameActivity.class);

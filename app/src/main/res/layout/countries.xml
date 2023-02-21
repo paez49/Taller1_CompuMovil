@@ -6,17 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".CountriesAcitvity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent">
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ListView
-            android:id="@+id/listaPaises"
-            android:layout_width="409dp"
-            android:layout_height="889dp"
-            app:layout_constraintStart_toStartOf="parent"
-            />
-    </LinearLayout>
+            android:id="@+id/list_view_paises"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:gravity="right|center_vertical"
+            android:textDirection="locale"/>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
