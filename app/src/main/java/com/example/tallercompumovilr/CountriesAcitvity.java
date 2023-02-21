@@ -1,5 +1,6 @@
 package com.example.tallercompumovilr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -67,7 +68,9 @@ public class CountriesAcitvity extends AppCompatActivity {
                     throw new RuntimeException(e);
                 }
 
-            Log.i("ARREGLO",infoPais.toString());
+                Intent intentDetail = new Intent(CountriesAcitvity.this,DetailCountryActivity.class);
+                intentDetail.putStringArrayListExtra("info_pais", new ArrayList<String>(infoPais));
+                startActivity(intentDetail);
             }
         });
 

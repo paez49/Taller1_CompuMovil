@@ -47,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
             mainBinding.dateClickCountry.setText("El boton no ha sido utilizado");
         }
 
-
-
-
     }
     public void jugar(View view){
         Intent intentGame = new Intent(this,GameActivity.class);

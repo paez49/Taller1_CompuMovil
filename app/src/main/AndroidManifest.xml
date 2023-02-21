@@ -27,6 +27,9 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".DetailCountryActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
