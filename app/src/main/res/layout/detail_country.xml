@@ -45,52 +45,52 @@
 
             <TextView
                 android:paddingEnd="16dp"
-                android:text="Continente:"
+                android:text="@string/continente"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/continenteTextView"
                 android:textColor="@color/blue"
-                android:text="nombre del pais variable" />
+                android:text="" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:paddingEnd="16dp"
-                android:text="Código:"
+                android:text="@string/c_digo"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/codigoTextView"
                 android:textColor="@color/blue"
-                android:text="codigo del pais" />
+                android:text="" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:paddingEnd="16dp"
-                android:text="Nombre moneda:"
+                android:text="@string/nombre_moneda"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/nombreMonedaTextView"
                 android:textColor="@color/blue"
-                android:text="nombre moneda" />
+                android:text="" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:paddingEnd="16dp"
-                android:text="Simbolo moneda"
+                android:text="@string/simbolo_moneda"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/simboloMonedaTextView"
                 android:textColor="@color/blue"
-                android:text="continente del pais" />
+                android:text="" />
         </TableRow>
 
     </TableLayout>
