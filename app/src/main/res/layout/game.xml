@@ -51,7 +51,7 @@
         android:layout_height="217dp"
         android:gravity="center"
 
-        android:text="@string/lo_lograste_el_numero_era"
+        android:text="Lo lograste el numero era "
         android:textAlignment="center"
         android:textSize="50dp"
     android:visibility="gone"
@@ -73,5 +73,15 @@
         tools:layout_editor_absoluteX="45dp">
 
     </TextView>
+
+    <ImageView
+        android:id="@+id/winImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessText"
+        app:srcCompat="@drawable/awesome_face"
+        android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

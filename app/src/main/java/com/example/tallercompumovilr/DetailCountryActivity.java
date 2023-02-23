@@ -1,13 +1,12 @@
 package com.example.tallercompumovilr;
 
+import android.app.ActionBar;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.tallercompumovilr.databinding.DetailCountryBinding;
-import com.example.tallercompumovilr.databinding.GameBinding;
 
 import java.util.List;
 
@@ -15,7 +14,9 @@ import java.util.List;
 public class DetailCountryActivity extends AppCompatActivity {
     private DetailCountryBinding detailCountryBinding;
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         detailCountryBinding = DetailCountryBinding.inflate(getLayoutInflater());
         setContentView(detailCountryBinding.getRoot());
         List<String> infoPais = getIntent().getStringArrayListExtra("info_pais");

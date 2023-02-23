@@ -40,6 +40,7 @@ public class GameActivity extends AppCompatActivity {
                 String aux = "Lo hiciste en "+cantiIntentos+" intentos.";
                 gameBinding.textoIntentos.setText(aux);
                 gameBinding.textoIntentos.setVisibility(View.VISIBLE);
+                gameBinding.winImage.setVisibility(View.VISIBLE);
 
             }else{
                 cantiIntentos++;
