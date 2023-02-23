@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Guess the number and Countries</string>
+    <string name="app_name">Taller 1</string>
     <string name="textCountriesDateClick">Usado por ultima vez el</string>
     <string name="countClickCountries">El boton ha sido pulsado</string>
     <string name="countClickGame">El boton ha sido pulsado</string>
