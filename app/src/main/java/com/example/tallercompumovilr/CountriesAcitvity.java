@@ -64,6 +64,8 @@ public class CountriesAcitvity extends AppCompatActivity {
                     infoPais.add(paisJson.getString("Name"));
                     infoPais.add(paisJson.getString("Alpha3Code"));
                     infoPais.add(paisJson.getString("FlagPng"));
+                    infoPais.add(paisJson.getString("CurrencyName"));
+                    infoPais.add(paisJson.getString("CurrencySymbol"));
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }

@@ -43,7 +43,7 @@
                 android:onClick="jugar"
                 android:paddingLeft="30dp"
                 android:paddingRight="60dp"
-                android:text="JUGAR"
+                android:text="@string/jugar"
                 android:textSize="30dp" />
 
             <TextView
@@ -85,7 +85,7 @@
                 android:onClick="paises"
                 android:paddingRight="60dp"
                 android:paddingLeft="30dp"
-                android:text="PAISES"
+                android:text="@string/paises"
                 android:textSize="30dp" />
 
             <TextView

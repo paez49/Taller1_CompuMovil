@@ -7,12 +7,92 @@
     tools:context=".DetailCountryActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/nombrePais"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bandera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:text="NOMBRE PAIS"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bandera"
+        android:layout_width="356dp"
+        android:layout_height="236dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_marginTop="68dp"
+        android:padding="16dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@+id/bandera"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TableRow>
+
+            <TextView
+                android:paddingEnd="16dp"
+                android:text="Continente:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/continenteTextView"
+                android:textColor="@color/blue"
+                android:text="nombre del pais variable" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:paddingEnd="16dp"
+                android:text="Código:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/codigoTextView"
+                android:textColor="@color/blue"
+                android:text="codigo del pais" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:paddingEnd="16dp"
+                android:text="Nombre moneda:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nombreMonedaTextView"
+                android:textColor="@color/blue"
+                android:text="nombre moneda" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:paddingEnd="16dp"
+                android:text="Simbolo moneda"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/simboloMonedaTextView"
+                android:textColor="@color/blue"
+                android:text="continente del pais" />
+        </TableRow>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

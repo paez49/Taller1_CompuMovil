@@ -4,4 +4,10 @@
     <string name="countClickCountries">El boton ha sido pulsado</string>
     <string name="countClickGame">El boton ha sido pulsado</string>
     <string name="gameTextDateClick">Usado por ultima vez</string>
+    <string name="jugar">JUGAR</string>
+    <string name="paises">PAISES</string>
+    <string name="guess_the_number">Guess The Number😱</string>
+    <string name="ingrese_el_numero">Ingrese el numero</string>
+    <string name="adivinar">Adivinar</string>
+    <string name="lo_lograste_el_numero_era">Lo lograste el numero era</string>
 </resources>
